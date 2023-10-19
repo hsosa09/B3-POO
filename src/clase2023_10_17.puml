@@ -1,0 +1,41 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class TarjetaDeDebito{
+    -nombre: String
+    -numero: String
+    -vencimiento: Date
+    -cuenta: Cuenta
+
+    +compra(monto:float): void
+    -alcanzaSaldo (monto: float): boolean
+}
+
+
+class Cuenta{
+    -saldo: (monto: float)
+
+
+    +obtenerSaldo(): float
+}
+
+TarjetaDeDebito --> Cuenta: -cuenta
+
+
+class TarjetaCredito {
+  - numeroTarjeta: String
+  - limiteFinanciacion: Float
+  - interes: Float
+  - maxCuotas: int
+  - saldoConsumido: Float
+  - saldoImpago: Float
+  + realizarCompra(monto: Float, cuotas: int): Void
+  - comprobarSaldo(monto: Float): Boolean
+  +resumenCompra(CuotasPagadas: int): Float
+}
+
+
+
+
+
+@enduml
