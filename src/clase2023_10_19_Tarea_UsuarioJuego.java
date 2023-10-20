@@ -9,7 +9,6 @@ public class clase2023_10_19_Tarea_UsuarioJuego {
         this.nombre = nombre;
         this.clave = clave;
         this.puntaje = 0;
-        asdasdsaddas
         this.nivel = 0;
     }
 
